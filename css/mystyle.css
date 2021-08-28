@@ -32,6 +32,68 @@ body {
   color: #006400;
 }
 
+.menu {
+  background-color: #1e3465;
+  color: white;
+}
+
+.menu-left a {
+  color: white;
+  padding: 15px 0;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: block;
+}
+
+.menu-left a.active {
+  color: #ffeb3b;
+  border-bottom: 2px solid #ffeb3b;
+}
+
+.drop-down-wrap {
+  position: relative;
+}
+
+.dropdown-menu-desktop {
+  position: absolute;
+  /* top: 100%;*/
+  left: -10%;
+  min-width: 230%;
+  background-color: #1f3465;
+  z-index: 1000;
+  display: none;
+  /* transition: all 0.2s;
+  animation: loading-menu linear 0.2s; */
+}
+
+.dropdown-menu-desktop a {
+  color: white;
+  /* display: block; */
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  margin-right: 0;
+}
+
+.drop-down-wrap:hover .dropdown-menu-desktop {
+  display: block;
+}
+
+.dropdown-menu-desktop a:hover {
+  color: #ffeb3b;
+  /* border-bottom: 2px solid #ffeb3b; */
+}
+
 .footer {
   background-color: #1e3465;
   color: white;
