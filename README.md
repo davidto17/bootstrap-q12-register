@@ -1,0 +1,1 @@
+Allow people to register
