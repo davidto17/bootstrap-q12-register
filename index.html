@@ -1,135 +1,155 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <title>Register for vaccine</title>
-    <meta
-      name="description"
-      content="Sample project allow people to register for something"
-    />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="./assets/logo.png" sizes="32x32" />
-    <link rel="icon" href="./assets/logo.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="./assets/logo.png" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/mystyle.css" />
-    <script src="./script/script.js"></script>
-  </head>
-  <body>
-    <div class="header white">
-      <div class="header-container container d-lg-flex p-3  text-center text-lg-left">
-        <img src="./assets/logo.png" class="logo mr-4"></img>
-        <div class="title align-self-center mt-3 mt-lg-0">
-          <div class="big-title">ỦY BAN NHÂN DÂN QUẬN 12</div>
-          <div class="small-title">ĐĂNG KÝ TIÊM NGỪA VACCINE PHÒNG COVID-19 (MOCKING)</div>          
-        </div>   
+<head>
+  <title>Register for vaccine</title>
+  <meta name="description" content="Sample project allow people to register for something" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/logo.png" sizes="32x32" />
+  <link rel="icon" href="/assets/logo.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/assets/logo.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="/css/mystyle.css" />
+
+  <script src="/script/home.js"></script>
+  <script src="/script/script.js"></script>
+</head>
+
+<body>
+  <div class="header white">
+
+    <div class="header-container container d-lg-flex p-3  text-center text-lg-left">
+
+      <div class="header--mobile-icon" id="show-menu-mobile">
+        <i class="fas fa-bars "></i>
       </div>
-    </div>
-    
-    <div class="menu">
-      <div class="container ">
-        <nav class="menu-left d-flex ">
-          <a href="/" class="active">Trang chủ</a>      
-          <a href="#" >Danh sách đăng ký</a>                
-          <a href="#">Đăng ký</a>                                    
-          <div class="drop-down-wrap">
-              <a> Hướng dẫn sử dụng</a>     
-              <div class="dropdown-menu-desktop">
-                  <a href="#">Hướng dẫn cho người dân</a>
-                  <a href="#">Hướng dẫn cho Cơ quan quản lý cấp quận</a>
-                
-              </div>
+      <div class="header--mobile-overload-shadow"></div>
+      <div class="nav-mobile">
+        <i class="fas fa-times nav-mobile--close " id="hiden-menu-mobile"></i>
+        <a href="/" class="active">Trang chủ</a>
+        <a href="#">Danh sách đăng ký</a>
+        <a href="/register">Đăng ký</a>
+        <div class="menu-dropdown-mobile">
+          <a href="#">Hướng dẫn sử dụng</a>
+          <div class="menu-dropdown-mobile--child">
+            <a href="#">Hướng dẫn cho người dân</a>
+            <a href="#">Hướng dẫn cho Cơ quan quản lý cấp quận</a>
           </div>
-      </nav>
-    </div></div>
+        </div>
+        <a href="#">Phản Ánh - Góp Ý</a>
+      </div>
 
-    <div class="main-content container my-3">
-      <div class="dashboard-wrapper">
-        CONTENT GO HERE
+
+
+      <img src="/assets/logo.png" class="logo mr-4"></img>
+      <div class="title align-self-center mt-3 mt-lg-0">
+        <div class="big-title">ỦY BAN NHÂN DÂN QUẬN 12</div>
+        <div class="small-title">ĐĂNG KÝ TIÊM NGỪA VACCINE PHÒNG COVID-19 (MOCKING)</div>
       </div>
     </div>
+  </div>
 
-    
-    <div class="footer d-flex justify-content-center">
-        <div class="containter footer-wrapper ">
-          <div class="row">
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">                
-                <div class="footer-item-head d-flex align-items-center mb-2">
-                  <i class="fas fa-map-marker-alt "></i>
-                  <div class="footer-item-title font-weight-bold">VỊ TRÍ</div>  
-                </div>
-          
-                <div class="footer-item-desc">
-                  <p>Ủy ban nhân dân Quận 12, Thành phố Hồ Chí Minh</p>
-                  <p>Số 1, Lê Thị Riêng, P.Thới An, Quận 12</p>
-                </div>
-              </div>
+  <div class="menu d-none d-lg-block">
+    <div class="container ">
+      <nav class="menu-left d-flex ">
+        <a href="/" class="active">Trang chủ</a>
+        <a href="#">Danh sách đăng ký</a>
+        <a href="/register/">Đăng ký</a>
+        <div class="drop-down-wrap ">
+          <a> Hướng dẫn sử dụng</a>
+          <div class="dropdown-menu-desktop">
+            <a href="#">Hướng dẫn cho người dân</a>
+            <a href="#">Hướng dẫn cho Cơ quan quản lý cấp quận</a>
+          </div>
+        </div>
+        <a href="#">Phản Ánh - Góp Ý</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="main-content container my-3">
+    <div class="dashboard-wrapper">
+      CONTENT GO HERE
+    </div>
+  </div>
+
+
+  <div class="footer d-flex justify-content-center">
+    <div class="containter footer-wrapper ">
+      <div class="row">
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-item">
+            <div class="footer-item-head d-flex align-items-center mb-2">
+              <i class="fas fa-map-marker-alt "></i>
+              <div class="footer-item-title font-weight-bold">VỊ TRÍ</div>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">                
-                <div class="footer-item-head d-flex align-items-center mb-2">              
-                  <i class="fas fa-clock "></i>
-                  <div class="footer-item-title font-weight-bold">THỜI GIAN LÀM VIỆC</div>  
-                </div>
-          
-                <div class="footer-item-desc">
-                  <p>Thứ 2 đến thứ 6: Sáng: <span class="footer-item-desc-highlight">7g30 – 11g30</span></p>
-                  <p>Chiều: <span class="footer-item-desc-highlight">13g00 – 17g00</span></p>
-                  <p>Thứ 7: Sáng: <span class="footer-item-desc-highlight">7g30 – 11g30</span> </p>
-
-             
-                </div>
-              </div>
+            <div class="footer-item-desc">
+              <p>Ủy ban nhân dân Quận 12, Thành phố Hồ Chí Minh</p>
+              <p>Số 1, Lê Thị Riêng, P.Thới An, Quận 12</p>
             </div>
-
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">                
-                <div class="footer-item-head d-flex align-items-center mb-2">              
-                  
-                  <i class="fas fa-phone"></i>
-                  <div class="footer-item-title font-weight-bold"> ĐIỆN THOẠI HỖ TRỢ</div>  
-                </div>
-          
-                <div class="footer-item-desc">
-                  <p>Phản ánh về ANTT: (028)‎38.12.12.12</p>
-                  <p>Ủy ban nhân dân quận:(028)3.9826.312</p>
-                  <p>Công an quận: (028)3.7173.560</p>              
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">                
-                <div class="footer-item-head d-flex align-items-center mb-2">                                         
-                  <i class="fas fa-comments"></i>
-                  <div class="footer-item-title font-weight-bold"> PHẢN ÁNH – GÓP Ý</div>  
-                </div>
-          
-                <div class="footer-item-desc">           
-
-                </div>
-              </div>
-            </div>
-
-      
           </div>
         </div>
 
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-item">
+            <div class="footer-item-head d-flex align-items-center mb-2">
+              <i class="fas fa-clock "></i>
+              <div class="footer-item-title font-weight-bold">THỜI GIAN LÀM VIỆC</div>
+            </div>
+
+            <div class="footer-item-desc">
+              <p>Thứ 2 đến thứ 6: Sáng: <span class="footer-item-desc-highlight">7g30 – 11g30</span></p>
+              <p>Chiều: <span class="footer-item-desc-highlight">13g00 – 17g00</span></p>
+              <p>Thứ 7: Sáng: <span class="footer-item-desc-highlight">7g30 – 11g30</span> </p>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-item">
+            <div class="footer-item-head d-flex align-items-center mb-2">
+
+              <i class="fas fa-phone"></i>
+              <div class="footer-item-title font-weight-bold"> ĐIỆN THOẠI HỖ TRỢ</div>
+            </div>
+
+            <div class="footer-item-desc">
+              <p>Phản ánh về ANTT: (028)‎38.12.12.12</p>
+              <p>Ủy ban nhân dân quận:(028)3.9826.312</p>
+              <p>Công an quận: (028)3.7173.560</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-item">
+            <div class="footer-item-head d-flex align-items-center mb-2">
+              <i class="fas fa-comments"></i>
+              <div class="footer-item-title font-weight-bold"> PHẢN ÁNH – GÓP Ý</div>
+            </div>
+
+            <div class="footer-item-desc">
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
     </div>
-    
-  </body>
+
+  </div>
+
+</body>
+
 </html>
