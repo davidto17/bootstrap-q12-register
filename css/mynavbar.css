@@ -1,0 +1,182 @@
+/* Main nav for large size with a dropdown menu on hover */
+/* The clever thing of dropdown is dropdown-menu-desktop show when the drop-down-wrapper in hover state 
+The show/hide of nav main is done by bootstrap
+This require no js */
+.nav-main-wrapper {
+  background-color: #1e3465;
+  color: white;
+}
+
+.nav-main-left a {
+  color: white;
+  padding: 15px 0;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: block;
+}
+
+.nav-main-left a.active {
+  color: #ffeb3b;
+  border-bottom: 2px solid #ffeb3b;
+}
+
+.drop-down-wrapper {
+  position: relative;
+}
+
+.dropdown-menu-desktop {
+  position: absolute;
+  /* top: 100%;*/
+  left: -10%;
+  min-width: 230%;
+  background-color: #1f3465;
+  z-index: 1000;
+  display: none;
+  /* transition: all 0.2s;
+    animation: loading-menu linear 0.2s; */
+}
+
+.dropdown-menu-desktop a {
+  color: white;
+  /* display: block; */
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  margin-right: 0;
+}
+
+.drop-down-wrapper:hover .dropdown-menu-desktop {
+  display: block;
+}
+
+.dropdown-menu-desktop a:hover {
+  color: #ffeb3b;
+  /* border-bottom: 2px solid #ffeb3b; */
+}
+
+/* ************************************************
+************************************************
+************************************************ */
+/* NAV FOR MOBILE
+It require multiple elements & js codes:
+- header--mobile-icon: show at small size, hamburger icon; has js event to add show class to mobile nav shadow
+- header--mobile-overload-shadow: the shadow background when mobile nav is shown, if click then hidden
+- nav-mobile: the nav menu that default located fixed at the left out of screen, when header--mobile-icon is clicked, it will translate into screen
+- hiden-menu-mobile: a close icon of nav mobile menu
+- menu-dropdown-mobile: very likely to the dropdown in nav main.
+- Since bootstrap not supported, the show/hide of nav mobile is done through media query (991px is large)
+*/
+/* The nav mobile need a mediaquery for large size & home.js to work, 
+At large size, the side menu has negative X so hidden, and translate to screen in smaller size*/
+
+.header--mobile-icon {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #1e3465;
+  position: absolute;
+  /* top: 0;
+    left: 0; */
+  display: none;
+}
+
+.header--mobile-overload-shadow.show {
+  display: block;
+}
+.header--mobile-overload-shadow {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.35);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+.nav-mobile {
+  position: fixed;
+  text-align: left;
+  width: 300px;
+  background-color: #1e3465;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 100;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  padding-top: 70px;
+  transition: all 0.2s;
+
+  /*not show in screen but actually at the left of screen*/
+  transform: translateX(-120%);
+}
+.nav-mobile.show {
+  transform: translateX(0);
+}
+.nav-mobile--close {
+  font-size: 2rem;
+  padding: 10px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.nav-mobile a.active {
+  color: #ffeb3b;
+}
+.nav-mobile a {
+  font-weight: bold;
+  padding: 15px 20px;
+  color: white;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.menu-dropdown-mobile:hover .menu-dropdown-mobile--child {
+  display: block;
+}
+
+.menu-dropdown-mobile .menu-dropdown-mobile--child {
+  display: none;
+  padding-left: 30px;
+  padding-top: 0;
+}
+.menu-dropdown-mobile a {
+  display: block;
+}
+.menu-dropdown-mobile--child a {
+  display: block;
+  font-size: 12px;
+  padding: 15px 5px !important;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+@media screen and (max-width: 991px) {
+  /* THIS SIZE MEAN LARGE BOOTSTRAP */
+  .header--mobile-icon {
+    display: block;
+  }
+  .menu-dropdown-mobile {
+    position: relative;
+    display: block;
+  }
+}
+
+/*END NAV MOBILE*/
