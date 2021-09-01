@@ -1,0 +1,76 @@
+
+.input-floating-label input {
+    height: 40px;
+  }
+  
+  .ant-input {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px 11px;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .ant-input:focus {
+    border-color: #1e3465;
+    border-right-width: 1px !important;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(158 187 255);
+  }
+  
+  .ant-input-group .ant-input:focus,
+  .ant-input-group .ant-input:hover {
+    z-index: 1;
+    border-right-width: 1px;
+  }
+  
+  .ant-input-group .ant-input {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: inherit;
+  }
+  
+  .input-floating-label label {
+    cursor: text;
+    color: rgb(104, 104, 104);
+    position: absolute;
+    top: 9px;
+    left: 1.5rem;
+    z-index: 1;
+    transition: transform 0.2s, color 0.2s;
+    touch-action: manipulation;
+    pointer-events: none;
+  }
+  
+  .ant-input:focus .input-floating-label label {
+    transform: translateY(-21px) scale(0.9);
+    transition: transform 0.2s, color 0.2s;
+    font-weight: 700;
+    background-color: white;
+  }
+  
+  .input-floating-label--active + label {
+    transform: translateY(-21px) scale(0.9);
+    transition: transform 0.2s, color 0.2s;
+    font-weight: 700;
+    background-color: white;
+    color: rgb(104, 104, 104);
+    padding: 0 10px;
+    font-size: 14px;
+    /* font-family: var(--ff-bold); */
+  }
+  

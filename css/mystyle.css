@@ -16,7 +16,7 @@ body {
 
 .header {
   position: relative;
-  /* this is relative to able to contain the fiexed nav-mobile */
+  /* this is relative to able to contain the fixed nav-mobile */
 }
 
 .logo {
@@ -68,7 +68,13 @@ body {
   font-size: 1rem;
 }
 
-.form-main-content {
+.form-main-content hr {
+  border: 2px solid #c5d6ff;
+}
+
+.form-group.required .control-label:after {
+  content: "*";
+  color: red;
 }
 
 .footer {
@@ -135,25 +141,4 @@ body {
   color: #fff;
   text-decoration: none;
   filter: brightness(110%);
-}
-
-.white {
-  /* background-color: aquamarine; */
-  background-color: white;
-}
-
-.green-gradient {
-  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
-}
-
-.blue-gradient {
-  background: linear-gradient(45deg, #4099ff, #73b4ff);
-}
-
-.yellow-gradient {
-  background: linear-gradient(45deg, #ffb64d, #ffcb80);
-}
-
-.red-gradient {
-  background: linear-gradient(45deg, #ff5370, #ff869a);
 }
