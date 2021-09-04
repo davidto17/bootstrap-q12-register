@@ -87,7 +87,7 @@
                 <div class="row">
                   <div class="col">
                     <div class="form-group required">
-                      <label for="fullname" class="control-label">Họ và tên:</label>
+                      <label for="fullname" class="custom-required-label">Họ và tên:</label>
                       <input id="fullname" type="text" placeholder="Họ tên" class="form-control" required />
                       <small id="fullnameHelp" class="form-text text-muted">Nhập đầy đủ họ tên khai sinh</small>
                       <div class="invalid-feedback">
@@ -97,17 +97,17 @@
                   </div>
                   <div class="col">
                     <div class="form-group required">
-                      <label for="email" class="control-label">Email:</label>
-                      <input id="email" type="text" placeholder="Email" class="form-control" required />
+                      <label for="email" class="custom-required-label">Email:</label>
+                      <input id="email" type="email" placeholder="Email" class="form-control" required />
                       <div class="invalid-feedback">
-                        Email không được để trống.
+                        Vui lòng nhập email.
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="form-group required">
-                  <label for="birthday" class="control-label">Ngày, tháng, năm sinh:</label>
+                  <label for="birthday" class="custom-required-label">Ngày, tháng, năm sinh:</label>
                   <input id="birthday" type="date" class="form-control" required />
                   <div class="invalid-feedback">
                     Vui lòng cung cấp ngày, tháng, năm sinh.
@@ -129,34 +129,41 @@
                 <div class="row">
                   <div class="col">
                     <div class="form-group required">
-                      <label for="telephone" class="control-label">Số điện thoại:</label>
+                      <label for="telephone" class="custom-required-label">Số điện thoại:</label>
                       <input id="telephone" type="text" placeholder="Số điện thoại" class="form-control" required
-                        min=9 />
+                        pattern="[0-9]{10,}" />
                       <div class="invalid-feedback">
-                        Vui lòng nhập Số điện thoại.
+                        Vui lòng nhập Số điện thoại (tối thiểu 10 số)
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group required">
-                      <label for="cmnd" class="control-label">Số CMND/CCCD:</label>
-                      <input id="cmnd" type="text" placeholder="Số CMND/CCCD" class="form-control" required />
+                      <label for="cmnd" class="custom-required-label">Số CMND/CCCD:</label>
+                      <input id="cmnd" type="number" placeholder="Số CMND/CCCD" class="form-control" required
+                        pattern="[0-9]{9,}" />
                       <div class="invalid-feedback">
-                        Vui lòng nhập Số CMND/CCCD.
+                        Vui lòng nhập Số CMND/CCCD (tối thiểu 9 số)
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group ">
-                      <label for="bhyt" class="control-label">Số thẻ Bảo hiểm y tế:</label>
-                      <input id="bhyt" type="text" placeholder="Số thẻ BHYT" class="form-control" />
+                      <label for="bhyt" class="custom-required-label">Số thẻ Bảo hiểm y tế:</label>
+                      <input id="bhyt" type="text" placeholder="Số thẻ BHYT" class="form-control"
+                        pattern="[0-9a-zA-Z]{5,}" />
                       <small id="fullnameHelp" class="form-text text-muted">Nhập số thẻ BHYT nếu có</small>
                     </div>
                   </div>
                 </div>
 
+                <div class="form-group required">
+                  <label for="uploadAvatar" class="custom-required-label">Ảnh đại diện</label>
+                  <input type="file" class="form-control-file" id="uploadAvatar" required>
+                </div>
+
                 <div class="form-group">
-                  <label for="wardselect">Phường:</label>
+                  <label for="wardSelect">Phường:</label>
                   <select class="form-control" id="wardselect">
                     <option>An Phú Đông</option>
                     <option>Đông Hưng Thuận</option>
@@ -173,6 +180,12 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="extra-info">Thông tin bệnh nền:</label>
+                  <textarea id="extra-info" placeholder="Thông tin khai báo thêm về tiểu sử bệnh nền"
+                    class="form-control" maxlength="300"></textarea>
+                </div>
+
+                <div class="form-group">
                   <label class="form-check-label">Ông/Bà có đồng ý tiêm vaccine phòng Covid-19 ?</label>
                   <div class="form-check ">
                     <input class="form-check-input" type="checkbox" id="agree-to-inject" value="agree-to-inject">
@@ -184,6 +197,7 @@
                 <button type="submit" class="btn btn-primary"> Đăng ký</button>
               </form>
 
+              <script src="./script/register_validation.js"></script>
               <!-- <hr /> -->
               <!-- <form>
                 <div class="row">
@@ -195,7 +209,9 @@
                   </div>
                 </div>
               </form> -->
-              <script>
+
+
+              <!-- <script>
                 (function () {
                   'use strict';
                   window.addEventListener('load', function () {
@@ -215,7 +231,7 @@
                     });
                   }, false);
                 })();
-              </script>
+              </script> -->
 
             </div>
           </div>
