@@ -79,19 +79,16 @@
         <div class="form-main-header d-flex align-items-center justify-content-center">
           Đăng ký tiêm vaccine phòng Covid-19
         </div>
-        <div class="form-main-content d-flex">
-          <pre>
-          
-Các form control để đăng ký vaccine:
-- section and legend
-- Short text/ required
-- Slim select
-- date picker
-- check box
-- option box
-- text area
-- submit button
-        </pre>
+        <div class="form-main-content d-flex" id="mainContent">                
+                Các form control để đăng ký vaccine:
+                - section and legend
+                - Short text/ required
+                - Slim select
+                - date picker
+                - check box
+                - option box
+                - text area
+                - submit button
         </div>
       </div>
 
@@ -101,12 +98,11 @@ Các form control để đăng ký vaccine:
         
 <button onclick="responsiveVoice.speak('Xin chào mừng quý khách ghé thăm Trang website thử nghiệm của chúng tôi!',  'Vietnamese Female');" 
 type="button" value="Play">Xin chào</button>
-
+        <br>        
+        <button onclick="responsiveVoice.speak(getMainContentText(),  'Vietnamese Female');" type="button" value="Play">Đọc nội dung</button>                 
       </div>
     </div>
   </div>
-
-
 
   <div class="footer d-flex justify-content-center">
     <div class="containter footer-wrapper ">
@@ -178,6 +174,14 @@ type="button" value="Play">Xin chào</button>
 
   </div>
 <script src="https://code.responsivevoice.org/responsivevoice.js?key=cTH1CmsP"></script>
+  <script>
+    function getMainContentText() {
+       const container = document.getElementById('mainContent');
+      console.log(mainContent.textContent);
+      return mainContent.textContent;
+    }
+
+  </script>
 </body>
 
 </html>
